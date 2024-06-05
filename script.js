@@ -13,7 +13,18 @@ function getComputerChoice() {
         }
     }
 
+let choice = prompt("Type rock, paper, or scissors!", "Type your choice!")
+
 function getHumanChoice() {
-    prompt
+    if (choice = "rock") {
+        return "Rock"
+    }
+    else if (choice = "paper") {
+        return "Paper"
+    }
+    else if (choice = "scissors") {
+        return "scissors"
+    }
 
 }
+console.log(getHumanChoice);
