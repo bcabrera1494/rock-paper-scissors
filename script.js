@@ -27,4 +27,10 @@ function getHumanChoice() {
     }
 
 }
-console.log(getHumanChoice);
+
+let humanScore = 0;
+let computerScore = 0;
+
+let humanChoice = new EventTarget().addEventListener ();
+
+let computerChoice = new EventTarget().addEventListener();
