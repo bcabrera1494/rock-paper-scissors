@@ -30,8 +30,3 @@ function getHumanChoice() {
 
 var humanScore = 0;
 var computerScore = 0;
-
-
-let humanChoice = new EventTarget().addEventListener ();
-
-let computerChoice = new EventTarget().addEventListener();
