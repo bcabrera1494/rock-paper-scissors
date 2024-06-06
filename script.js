@@ -38,7 +38,7 @@ function playRound(humanChoice, computerChoice) {
     if(humanChoice === "Rock" && computerChoice === "Rock" 
     || humanChoice === "Paper" && computerChoice === "Paper" 
     || humanChoice === "Scissors" && computerChoice === "Scissors") {
-        return "Tie game! Play again"
+        return "Tie game! Play again."
     }
     else if(humanChoice === "Rock" && computerChoice === "Paper") {
         return "You lose! Paper beats rock!"
@@ -64,5 +64,12 @@ const humanSelection = humanChoice;
 const computerSelection = computerChoice;
 
 playRound(humanSelection, computerSelection);
-
-console.log(playRound);
+    if (playRound === "Tie game! Play again.") {
+        return "Score: Human =" + humanScore + ", Computer = " + computerScore
+    }
+    else if(playRound === "You lose! Paper beats rock!"
+        || "You lose! Scissors beats paper!"
+        || "You lose! Rock beats scissors!") {
+            return "Score: Human =" + humanScore + ", Computer = " + (computerScore ++)
+        }
+    
