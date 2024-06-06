@@ -35,7 +35,9 @@ let humanChoice = getHumanChoice();
 let computerChoice = getComputerChoice(); 
 
 function playRound(humanChoice, computerChoice) {
-    if(humanChoice === computerChoice) {
+    if(humanChoice === "Rock" && computerChoice === "Rock" 
+    || humanChoice === "Paper" && computerChoice === "Paper" 
+    || humanChoice === "Scissors" && computerChoice === "Scissors") {
         return "Tie game! Play again"
     }
     else if(humanChoice === "Rock" && computerChoice === "Paper") {
