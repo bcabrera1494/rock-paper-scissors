@@ -31,8 +31,8 @@ function getHumanChoice() {
 var humanScore = 0;
 var computerScore = 0;
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice(); 
+var humanChoice = getHumanChoice();
+var computerChoice = getComputerChoice(); 
 
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === "Rock" && computerChoice === "Rock" 
@@ -58,11 +58,10 @@ function playRound(humanChoice, computerChoice) {
     else if(humanChoice === "Scissors" && computerChoice === "Paper") {
         return "You win! Scissors beats paper!"
     }
-    
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+const humanSelection = humanChoice;
+const computerSelection = computerChoice;
 
 playRound(humanSelection, computerSelection);
 
