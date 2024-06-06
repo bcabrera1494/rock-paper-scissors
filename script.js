@@ -13,16 +13,16 @@ function getComputerChoice() {
         }
     }
 
-let choice = prompt("Type rock, paper, or scissors!", "Type your choice!");
+let choice = prompt("Type rock, paper, or scissors!", "Type your choice!").toLowerCase();
 
 function getHumanChoice() {
-    if (choice === "rock" | choice === "Rock") {
+    if (choice === "rock") {
         return "Rock"
     }
-    else if (choice === "paper" | choice === "Paper") {
+    else if (choice == "paper") {
         return "Paper"
     }
-    else if (choice === "scissors" | choice === "Scissors") {
+    else if (choice == "scissors") {
         return "Scissors"
     }
 
@@ -31,12 +31,12 @@ function getHumanChoice() {
 var humanScore = 0;
 var computerScore = 0;
 
-function playRound(humanChoice, computerChoice){
-    humanChoice = EventTarget().addEventListener()
-    computerChoice = EventTarget().addEventListener()
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice(); 
+
+function playRound(humanChoice, computerChoice) {
+    if(humanChoice = "Rock" && computerChoice =  )
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
