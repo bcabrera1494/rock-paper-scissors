@@ -61,10 +61,13 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = humanChoice;
 const computerSelection = computerChoice;
 
+const hScore = getHumanScore();
+const cScore = getComputerScore();
+
 function getHumanScore() {
-    var humanScore = 0;
+    let humanScore = 0;
     if (playRound === "Tie game! Play again.") {
-        return (humanScore++);
+        return humanScore ;
         }
     else if (playRound === "You lose! Paper beats rock!"
     || "You lose! Scissors beats paper!"
@@ -74,14 +77,14 @@ function getHumanScore() {
     else if (playRound === "You win! Rock beats scissors!"
     || "You win! Paper beats rock!"
     || "You win! Scissors beats paper!") {
-        return (humanScore++);
+        return ++humanScore;
     }
 }
 
 function getComputerScore() {
     var computerScore = 0;
     if (playRound === "Tie game! Play again.") {
-        return (computerScore++);
+        return ++computerScore;
         }
     else if (playRound === "You lose! Paper beats rock!"
     || "You lose! Scissors beats paper!"
@@ -91,6 +94,6 @@ function getComputerScore() {
     else if (playRound === "You win! Rock beats scissors!"
     || "You win! Paper beats rock!"
     || "You win! Scissors beats paper!") {
-        return (computerScore++);
+        return ++computerScore;
     }
 }
