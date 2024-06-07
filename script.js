@@ -9,7 +9,7 @@ function getComputerChoice() {
         return "Paper";
         }
     else if (randomNumber >= 0.6666666666666666 ) {
-        return "Scissors"
+        return "Scissors";
         }
     }
 
@@ -17,13 +17,13 @@ let choice = prompt("Type rock, paper, or scissors!", "Type your choice!").toLow
 
 function getHumanChoice() {
     if (choice === "rock") {
-        return "Rock"
+        return "Rock";
     }
     else if (choice === "paper") {
-        return "Paper"
+        return "Paper";
     }
     else if (choice === "scissors") {
-        return "Scissors"
+        return "Scissors";
     }
 
 }
@@ -38,25 +38,25 @@ function playRound(humanChoice, computerChoice) {
     if(humanChoice === "Rock" && computerChoice === "Rock" 
     || humanChoice === "Paper" && computerChoice === "Paper" 
     || humanChoice === "Scissors" && computerChoice === "Scissors") {
-        return "Tie game! Play again."
+        return "Tie game! Play again.";
     }
     else if(humanChoice === "Rock" && computerChoice === "Paper") {
-        return "You lose! Paper beats rock!"
+        return "You lose! Paper beats rock!";
     }
     else if(humanChoice === "Rock" && computerChoice === "Scissors") {
-        return "You win! Rock beats scissors!"
+        return "You win! Rock beats scissors!";
     }
     else if(humanChoice === "Paper" && computerChoice === "Scissors") {
-        return "You lose! Scissors beats paper!"
+        return "You lose! Scissors beats paper!";
     }
     else if(humanChoice === "Paper" && computerChoice === "Rock") {
-        return "You win! Paper beats rock!"
+        return "You win! Paper beats rock!";
     }
     else if(humanChoice === "Scissors" && computerChoice === "Rock") {
-        return "You lose! Rock beats scissors!"
+        return "You lose! Rock beats scissors!";
     }
     else if(humanChoice === "Scissors" && computerChoice === "Paper") {
-        return "You win! Scissors beats paper!"
+        return "You win! Scissors beats paper!";
     }
 }
 
@@ -65,11 +65,19 @@ const computerSelection = computerChoice;
 
 playRound(humanSelection, computerSelection);
     if (playRound === "Tie game! Play again.") {
-        return "Score: Human =" + humanScore + ", Computer = " + computerScore
-    }
+        return "Score: Human =" + humanScore + ", Computer = " + computerScore;
+         }
     else if(playRound === "You lose! Paper beats rock!"
         || "You lose! Scissors beats paper!"
-        || "You lose! Rock beats scissors!") {
-            return "Score: Human =" + humanScore + ", Computer = " + (computerScore ++)
+        || "You lose! Rock beats scissors!"
+        || "You lose! Paper beats rock!") {
+            return "Score: Human =" + humanScore + ", Computer = " + (computerScore++)
         }
+    else if (playRound === "You win! Rock beats scissors!"
+        || "You win! Paper beats rock!"
+        || "You win! Scissors beats paper!"
+        || "You win! Rock beats scissors!") {
+            return ("Score: Human = " + (humanScore++) + ", Computer = " + (computerScore))
+        }
+console.log(playRound);
     
