@@ -2,18 +2,19 @@
 let randomNumber = Math.random();
 
 function getComputerChoice() {
-    if (randomNumber <= 0.3333333333333333) {
+    if (randomNumber <= 0.33333333333333333333333333333333) {
         return "Rock";
         }
-    else if (randomNumber >=0.3333333333333333 <=0.6666666666666666) {
+    else if (randomNumber >=0.33333333333333333333333333333333 <=0.66666666666666666666666666666666) {
         return "Paper";
         }
-    else if (randomNumber >= 0.6666666666666666 ) {
+    else if (randomNumber >= 0.66666666666666666666666666666666) {
         return "Scissors"
         }
+   
     }
 
-let choice = prompt("Type rock, paper, or scissors!", "Type your choice!").toLowerCase();
+var choice = prompt("Type rock, paper, or scissors!", "Type your choice!").toLowerCase();
 
 function getHumanChoice() {
     if (choice === "rock") {
@@ -30,17 +31,15 @@ function getHumanChoice() {
 
 const humanSelection = humanChoice;
 const computerSelection = computerChoice;
+var humanChoice = getHumanChoice();
+var computerChoice = getComputerChoice();
 
-playRound(humanSelection,computerSelection);
-
-console.log(playRound);
-
-function playGame(); {
-    var humanChoice = getHumanChoice();
-    var computerChoice = getComputerChoice(); 
+function playGame() {
+ 
     var humanScore = 0
     var computerScore = 0
-    
+    var play = playRound(humanChoice, computerChoice);;
+
     function playRound(humanChoice, computerChoice) {
         if(humanChoice === "Rock" && computerChoice === "Rock" 
         || humanChoice === "Paper" && computerChoice === "Paper" 
@@ -72,5 +71,7 @@ function playGame(); {
             return "You win! Scissors beats paper!";
         }
     }
+
+    play
 
 }
