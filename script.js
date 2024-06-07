@@ -38,13 +38,13 @@ function playGame() {
  
     var humanScore = 0
     var computerScore = 0
-    var play = playRound(humanChoice, computerChoice);;
+    var play = playRound(humanSelection, computerSelection);
 
     function playRound(humanChoice, computerChoice) {
         if(humanChoice === "Rock" && computerChoice === "Rock" 
         || humanChoice === "Paper" && computerChoice === "Paper" 
         || humanChoice === "Scissors" && computerChoice === "Scissors") {
-            return "Tie game! Play again.";
+            return "Tie game!";
         }
         else if(humanChoice === "Rock" && computerChoice === "Paper") {
             ++computerScore;
