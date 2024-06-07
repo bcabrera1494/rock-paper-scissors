@@ -9,7 +9,7 @@ function getComputerChoice() {
         return "Paper";
         }
     else if (randomNumber >= 0.6666666666666666 ) {
-        return "Scissors";
+        return "Scissors"
         }
     }
 
@@ -41,7 +41,7 @@ function playRound(humanChoice, computerChoice) {
         return "Tie game! Play again.";
     }
     else if(humanChoice === "Rock" && computerChoice === "Paper") {
-        return "You lose! Paper beats rock!";
+        return "You lose! Paper beats rock!"
     }
     else if(humanChoice === "Rock" && computerChoice === "Scissors") {
         return "You win! Rock beats scissors!";
@@ -63,21 +63,34 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = humanChoice;
 const computerSelection = computerChoice;
 
-playRound(humanSelection, computerSelection);
+function getHumanScore() {
     if (playRound === "Tie game! Play again.") {
-        return "Score: Human =" + humanScore + ", Computer = " + computerScore;
-         }
-    else if(playRound === "You lose! Paper beats rock!"
-        || "You lose! Scissors beats paper!"
-        || "You lose! Rock beats scissors!"
-        || "You lose! Paper beats rock!") {
-            return "Score: Human =" + humanScore + ", Computer = " + (computerScore++)
+        return humanScore++;
         }
+    else if (playRound === "You lose! Paper beats rock!"
+    || "You lose! Scissors beats paper!"
+    || "You lose! Rock beats scissors!") {
+        return humanScore;
+    }
     else if (playRound === "You win! Rock beats scissors!"
-        || "You win! Paper beats rock!"
-        || "You win! Scissors beats paper!"
-        || "You win! Rock beats scissors!") {
-            return ("Score: Human = " + (humanScore++) + ", Computer = " + (computerScore))
+    || "You win! Paper beats rock!"
+    || "You win! Scissors beats paper!") {
+        return humanScore++;
+    }
+}
+
+function getComputerScore() {
+    if (playRound === "Tie game! Play again.") {
+        return computerScore++;
         }
-console.log(playRound);
-    
+    else if (playRound === "You lose! Paper beats rock!"
+    || "You lose! Scissors beats paper!"
+    || "You lose! Rock beats scissors!") {
+        return computerScore;
+    }
+    else if (playRound === "You win! Rock beats scissors!"
+    || "You win! Paper beats rock!"
+    || "You win! Scissors beats paper!") {
+        return computerScore++;
+    }
+}
