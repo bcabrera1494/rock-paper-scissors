@@ -31,6 +31,8 @@ function getHumanChoice() {
 
 var humanChoice = getHumanChoice();
 var computerChoice = getComputerChoice(); 
+var humanScore = 0
+var computerScore = 0
 
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === "Rock" && computerChoice === "Rock" 
@@ -39,21 +41,27 @@ function playRound(humanChoice, computerChoice) {
         return "Tie game! Play again.";
     }
     else if(humanChoice === "Rock" && computerChoice === "Paper") {
+        ++computerScore;
         return "You lose! Paper beats rock!"
     }
     else if(humanChoice === "Rock" && computerChoice === "Scissors") {
+        ++humanScore;
         return "You win! Rock beats scissors!";
     }
     else if(humanChoice === "Paper" && computerChoice === "Scissors") {
+        ++computerScore;
         return "You lose! Scissors beats paper!";
     }
     else if(humanChoice === "Paper" && computerChoice === "Rock") {
+        ++humanScore;
         return "You win! Paper beats rock!";
     }
     else if(humanChoice === "Scissors" && computerChoice === "Rock") {
+        ++computerScore
         return "You lose! Rock beats scissors!";
     }
     else if(humanChoice === "Scissors" && computerChoice === "Paper") {
+        ++humanScore
         return "You win! Scissors beats paper!";
     }
 }
@@ -61,39 +69,4 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = humanChoice;
 const computerSelection = computerChoice;
 
-const hScore = getHumanScore();
-const cScore = getComputerScore();
 
-function getHumanScore() {
-    let humanScore = 0;
-    if (playRound === "Tie game! Play again.") {
-        return humanScore ;
-        }
-    else if (playRound === "You lose! Paper beats rock!"
-    || "You lose! Scissors beats paper!"
-    || "You lose! Rock beats scissors!") {
-        return humanScore;
-    }
-    else if (playRound === "You win! Rock beats scissors!"
-    || "You win! Paper beats rock!"
-    || "You win! Scissors beats paper!") {
-        return ++humanScore;
-    }
-}
-
-function getComputerScore() {
-    var computerScore = 0;
-    if (playRound === "Tie game! Play again.") {
-        return ++computerScore;
-        }
-    else if (playRound === "You lose! Paper beats rock!"
-    || "You lose! Scissors beats paper!"
-    || "You lose! Rock beats scissors!") {
-        return computerScore;
-    }
-    else if (playRound === "You win! Rock beats scissors!"
-    || "You win! Paper beats rock!"
-    || "You win! Scissors beats paper!") {
-        return ++computerScore;
-    }
-}
