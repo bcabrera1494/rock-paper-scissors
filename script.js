@@ -2,13 +2,13 @@
 let randomNumber = Math.random();
 
 function getComputerChoice() {
-    if (randomNumber <= 0.33333333333333333333333333333333) {
+    if (randomNumber <= 0.3333333333333333) {
         return "Rock";
         }
-    else if (randomNumber >=0.33333333333333333333333333333333 <=0.66666666666666666666666666666666) {
+    else if (randomNumber >=0.3333333333333333 <=0.6666666666666666) {
         return "Paper";
         }
-    else if (randomNumber >= 0.66666666666666666666666666666666) {
+    else if (randomNumber >= 0.6666666666666666 ) {
         return "Scissors"
         }
    
@@ -38,9 +38,8 @@ function playGame() {
  
     var humanScore = 0
     var computerScore = 0
-    var play = playRound(humanSelection, computerSelection);
-
-    function playRound(humanChoice, computerChoice) {
+    var round = playRound(humanChoice, computerChoice);
+    function playRound() {
         if(humanChoice === "Rock" && computerChoice === "Rock" 
         || humanChoice === "Paper" && computerChoice === "Paper" 
         || humanChoice === "Scissors" && computerChoice === "Scissors") {
@@ -70,8 +69,9 @@ function playGame() {
             ++humanScore
             return "You win! Scissors beats paper!";
         }
+        if (computerChoice === undefined) {
+            getComputerChoice();
+        }
+    }    
+ 
     }
-
-    play
-
-}
