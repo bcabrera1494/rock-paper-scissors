@@ -1,5 +1,5 @@
 
-let randomNumber = Math.random();
+const randomNumber = Math.random();
 
 function getComputerChoice() {
     if (randomNumber <= 0.3333333333333333) {
@@ -14,7 +14,7 @@ function getComputerChoice() {
    
     }
 
-var choice = prompt("Type rock, paper, or scissors!", "Type your choice!").toLowerCase();
+const choice = prompt("Type rock, paper, or scissors!", "Type your choice!").toLowerCase();
 
 function getHumanChoice() {
     if (choice === "rock") {
@@ -36,9 +36,9 @@ var computerChoice = getComputerChoice();
 
 function playGame() {
  
-    var humanScore = 0
-    var computerScore = 0
-    var round = playRound(humanChoice, computerChoice);
+    let humanScore = 0
+    let computerScore = 0
+    let round = playRound(humanChoice, computerChoice);
     function playRound() {
         if(humanChoice === "Rock" && computerChoice === "Rock" 
         || humanChoice === "Paper" && computerChoice === "Paper" 
