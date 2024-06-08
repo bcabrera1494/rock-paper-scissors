@@ -18,7 +18,7 @@ const choice = prompt("Type rock, paper, or scissors!", "Type your choice!").toL
 
 function getHumanChoice() {
     if (choice === "rock") {
-        return console.log("Youc chose Rock.");
+        return console.log("You chose Rock.");
     }
     else if (choice === "paper") {
         return console.log("You chose Paper.");
@@ -38,7 +38,8 @@ var computerChoice = getComputerChoice();
     let humanScore = 0
     let computerScore = 0
     let round = playRound(humanChoice, computerChoice);
-    function playRound() {
+
+function playRound() {
         if(humanChoice === "Rock" && computerChoice === "Rock" 
         || humanChoice === "Paper" && computerChoice === "Paper" 
         || humanChoice === "Scissors" && computerChoice === "Scissors") {
@@ -73,3 +74,4 @@ var computerChoice = getComputerChoice();
         }
     }    
  
+console.log(round);
