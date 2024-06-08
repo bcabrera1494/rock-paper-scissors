@@ -3,13 +3,13 @@ const randomNumber = (Math.random()*3);
 
 function getComputerChoice() {
     if (randomNumber <= 1) {
-        return "Rock";
+        return console.log("Computer chose Rock.");
         }
     else if (randomNumber >=1 <=2) {
-        return "Paper";
+        return console.log("Computer chose Paper.");
         }
     else if (randomNumber >= 3 ) {
-        return "Scissors"
+        return console.log("Computer chose Scissors.");
         }
    
     }
@@ -18,13 +18,13 @@ const choice = prompt("Type rock, paper, or scissors!", "Type your choice!").toL
 
 function getHumanChoice() {
     if (choice === "rock") {
-        return "Rock";
+        return console.log("Youc chose Rock.");
     }
     else if (choice === "paper") {
-        return "Paper";
+        return console.log("You chose Paper.");
     }
     else if (choice === "scissors") {
-        return "Scissors";
+        return console.log("You chose Scissors.");
     }
 
 }
@@ -34,7 +34,6 @@ const computerSelection = computerChoice;
 var humanChoice = getHumanChoice();
 var computerChoice = getComputerChoice();
 
-function playGame() {
  
     let humanScore = 0
     let computerScore = 0
@@ -74,4 +73,3 @@ function playGame() {
         }
     }    
  
-    }
