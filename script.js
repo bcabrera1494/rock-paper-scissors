@@ -35,9 +35,9 @@ var humanChoice = getHumanChoice();
 var computerChoice = getComputerChoice();
 
  
-    let humanScore = 0
-    let computerScore = 0
-    let round = playRound(humanChoice, computerChoice);
+let humanScore = 0
+let computerScore = 0
+let round = playRound(humanChoice, computerChoice);
 
 function playRound() {
         if(humanChoice === "Rock" && computerChoice === "Rock" 
